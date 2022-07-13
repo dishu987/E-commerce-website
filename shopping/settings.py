@@ -26,16 +26,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qw3s5qjem6pybh^@6-e)0&uf7!l@7f-b=vv7mb+b47^$zp_)za'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-WHITENOISE_USE_FINDERS = True
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'whitenoise.runserver_nostatic','django.contrib.staticfiles',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -134,4 +132,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 #STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 #django_heroku.settings(locals())
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
